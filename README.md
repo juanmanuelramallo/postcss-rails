@@ -22,12 +22,14 @@ _Aplicación de Rails ya creada_
 ## El archivo gulpfile.js
 
 - Se deben requerir los siguiente módulos:
+
             var gulp = require('gulp')
             var postcss = require('gulp-postcss')
             var browserSync = require('browser-sync').create()
             var del = require('del');
             var rename = require('gulp-rename')
 - Y adicionalmente las partes de postcss que se desean usar (ver http://postcss.parts):
+
             var rucksack = require('rucksack-css')
             var cssnext = require('postcss-cssnext')
             var autoprefixer = require('autoprefixer')
