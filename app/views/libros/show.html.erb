@@ -1,0 +1,33 @@
+<div class="LibrosShow">
+
+<p id="notice"><%= notice %></p>
+
+<p class="LibrosShow-info">
+  <strong>Portada:</strong>
+  <%= image_tag @libro.portada.url(:medium) %>
+</p>
+
+<p class="LibrosShow-info">
+  <strong>Nombre:</strong>
+  <%= @libro.nombre %>
+</p>
+
+<p class="LibrosShow-info">
+  <strong>Descripción:</strong>
+  <%= @libro.descripción %>
+</p>
+
+<p class="LibrosShow-info">
+  <strong>Editorial:</strong>
+  <%= @libro.editorial %>
+</p>
+
+<p class="LibrosShow-info">
+  <strong>Año publicación:</strong>
+  <%= @libro.año_publicación %>
+</p>
+
+<%= link_to 'Editar', edit_libro_path(@libro), class:"btn btn-secundario" %> |
+<%= link_to 'Atrás', libros_path, class:"btn btn-cancel" %>
+
+</div>

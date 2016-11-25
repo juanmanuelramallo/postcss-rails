@@ -1,0 +1,44 @@
+<div class="LibrosForm">
+<%= form_for(libro) do |f| %>
+  <% if libro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(libro.errors.count, "error") %> prohibited this libro from being saved:</h2>
+
+      <ul class="LibrosForm-errors">
+      <% libro.errors.full_messages.each do |message| %>
+        <li class="LibrosForm-errors-message"><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="LibrosForm-field">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="LibrosForm-field">
+    <%= f.label :editorial %>
+    <%= f.text_field :editorial %>
+  </div>
+
+  <div class="LibrosForm-field">
+    <%= f.label :año_publicación %>
+    <%= f.number_field :año_publicación %>
+  </div>
+
+  <div class="LibrosForm-field">
+    <%= f.label :descripción %>
+    <%= f.text_field :descripción %>
+  </div>
+
+  <div class="LibrosForm-field">
+    <%= f.label :portada %>
+    <%= f.file_field :portada %>
+  </div>
+
+  <div class="LibrosForm-actions">
+    <%= f.submit "Aceptar", class:"btn btn-principal" %>
+  </div>
+<% end %>
+</div>
