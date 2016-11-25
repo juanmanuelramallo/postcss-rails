@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "Indie Flower";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Indie Flower"),local(IndieFlower),url(//fonts.gstatic.com/s/indieflower/v7/10JVD_humAd5zP2yrFqw6nZ2MAKAc2x4R1uOSeegc5U.eot?#) format("eot"),url(//fonts.gstatic.com/s/indieflower/v7/10JVD_humAd5zP2yrFqw6ugdm0LZdjqr5-oayXSOefg.woff2) format("woff2"),url(//fonts.gstatic.com/s/indieflower/v7/10JVD_humAd5zP2yrFqw6nhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Noto Sans Italic"),local(NotoSans-Italic),url(//fonts.gstatic.com/s/notosans/v6/ByLA_FLEa-16SpQuTcQn4GfQcKutQXcIrRfyR5jdjY8.eot?#) format("eot"),url(//fonts.gstatic.com/s/notosans/v6/ByLA_FLEa-16SpQuTcQn4I4P5ICox8Kq3LLUNMylGO4.woff2) format("woff2"),url(//fonts.gstatic.com/s/notosans/v6/ByLA_FLEa-16SpQuTcQn4IbN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Noto Sans Bold Italic"),local(NotoSans-BoldItalic),url(//fonts.gstatic.com/s/notosans/v6/9Z3uUWMRR7crzm1TjRicDrFt29aCHKT7otDW9l62Aag.eot?#) format("eot"),url(//fonts.gstatic.com/s/notosans/v6/9Z3uUWMRR7crzm1TjRicDolIZu-HDpmDIZMigmsroc4.woff2) format("woff2"),url(//fonts.gstatic.com/s/notosans/v6/9Z3uUWMRR7crzm1TjRicDjqR_3kx9_hJXbbyU8S6IN0.woff) format("woff");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans"),local(NotoSans),url(//fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nPY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nFtXRa8TVwTICgirnJhmVJw.woff2) format("woff2"),url(//fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"),local(NotoSans-Bold),url(//fonts.gstatic.com/s/notosans/v6/PIbvSEyHEdL91QLOQRnZ13Z2MAKAc2x4R1uOSeegc5U.eot?#) format("eot"),url(//fonts.gstatic.com/s/notosans/v6/PIbvSEyHEdL91QLOQRnZ1-gdm0LZdjqr5-oayXSOefg.woff2) format("woff2"),url(//fonts.gstatic.com/s/notosans/v6/PIbvSEyHEdL91QLOQRnZ13hCUOGz7vYGh680lGh-uXM.woff) format("woff");
+}
+.btn {
+  text-decoration: none;
+  padding: 2px 10px;
+  border: 1px gray solid;
+  border-radius: 3px;
+  color: black;
+}
+.btn-principal:hover{
+  border-color: #669ada;
+  background-color: rgb(214, 228, 245);
+}
+.LibrosShow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);;
+}
+.LibrosShow-title{
+  text-align: center;
+}
+.LibrosShow-imgcontainer {
+  /*filter: toaster;*/
+  height: 100%;
+}
+.LibrosShow-img{
+  height: 100%;
+}
+.LibrosShow-portada {
+  width: calc(99.9% * 1/3 - 20px);
+}
+.LibrosShow-portada:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none;
+}
+.LibrosShow-portada:last-child {
+  margin-right: 0;
+}
+.LibrosShow-portada:nth-child(3n) {
+  margin-right: 0;
+  float: right;
+}
+.LibrosShow-portada:nth-child(3n + 1) {
+  clear: both;
+}
+.LibrosShow-informacion{
+  width: calc(99.9% * 2/3 - 10px);
+}
+.LibrosShow-informacion:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none;
+}
+.LibrosShow-informacion:last-child {
+  margin-right: 0;
+}
+.LibrosShow-informacion:nth-child(3n) {
+  margin-right: 0;
+  float: right;
+}
+.LibrosShow-informacion:nth-child(3n + 1) {
+  clear: both;
+}
+.LibrosShow-informacion-container{
+  padding-top: 30px;
+}
+html{
+  background-color: #e6e6e6;
+  font-family: 'Noto Sans', sans-serif;
+}
+small{
+  color: gray;
+}
+a {
+  text-decoration: none;
+}
+.LibrosIndex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.LibrosIndex-title{
+  text-align: center;
+  font-size: 44px;
+  font-family: 'Indie Flower';
+}
+.LibrosIndex-libros{
+  width: calc(99.9% * 2/3 - 10px);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);;
+}
+.LibrosIndex-libros:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none;
+}
+.LibrosIndex-libros:last-child {
+  margin-right: 0;
+}
+.LibrosIndex-libros:nth-child(3n) {
+  margin-right: 0;
+  float: right;
+}
+.LibrosIndex-libros:nth-child(3n + 1) {
+  clear: both;
+}
+.LibrosIndex-libros-container {
+  padding: 20px;
+}
+.LibrosIndex-libros-table {}
+.LibrosIndex-info{
+  width: calc(99.9% * 1/3 - 20px);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);;
+}
+.LibrosIndex-info:nth-child(1n) {
+  float: left;
+  margin-right: 30px;
+  clear: none;
+}
+.LibrosIndex-info:last-child {
+  margin-right: 0;
+}
+.LibrosIndex-info:nth-child(3n) {
+  margin-right: 0;
+  float: right;
+}
+.LibrosIndex-info:nth-child(3n + 1) {
+  clear: both;
+}
+/*width: 20%;*/
+.LibrosIndex-info-container{
+  position: relative;
+  width: 100%;
+}
+.LibrosIndex-info-anadir {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+  /*border: 1px black solid;*/
+  font-size: 30px;
+}
+td {
+  text-align: center;
+}

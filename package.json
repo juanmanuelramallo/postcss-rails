@@ -1,0 +1,33 @@
+{
+  "name": "pediloya",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp clean; gulp css;"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "csswring": "^5.1.0",
+    "del": "^2.2.2",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "lost": "^7.1.1",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-font-magician": "^1.5.0",
+    "postcss-get-color": "^0.1.0",
+    "postcss-google-font": "^0.1.1",
+    "postcss-import": "^8.2.0",
+    "postcss-instagram": "^1.0.0",
+    "postcss-material-shadow-helper": "0.0.0",
+    "postcss-mixins": "^5.4.0",
+    "postcss-nested": "^1.0.0",
+    "rucksack-css": "^0.9.1"
+  }
+}

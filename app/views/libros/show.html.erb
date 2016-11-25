@@ -1,33 +1,43 @@
-<div class="LibrosShow">
+<h1 class="LibrosShow-title"> <%= @libro.nombre %> <small> ID:<%= @libro.id %> </small> </h1>
 
 <p id="notice"><%= notice %></p>
 
-<p class="LibrosShow-info">
-  <strong>Portada:</strong>
-  <%= image_tag @libro.portada.url(:medium) %>
-</p>
+<div class="LibrosShow">
 
-<p class="LibrosShow-info">
-  <strong>Nombre:</strong>
-  <%= @libro.nombre %>
-</p>
+  <div class="LibrosShow-portada">
 
-<p class="LibrosShow-info">
-  <strong>Descripción:</strong>
-  <%= @libro.descripción %>
-</p>
+    <div class="LibrosShow-imgcontainer">
+      <%= image_tag @libro.portada.url(:medium), class:"LibrosShow-img" %>
+    </div>
 
-<p class="LibrosShow-info">
-  <strong>Editorial:</strong>
-  <%= @libro.editorial %>
-</p>
+  </div>
 
-<p class="LibrosShow-info">
-  <strong>Año publicación:</strong>
-  <%= @libro.año_publicación %>
-</p>
+  <div class="LibrosShow-informacion">
 
-<%= link_to 'Editar', edit_libro_path(@libro), class:"btn btn-secundario" %> |
-<%= link_to 'Atrás', libros_path, class:"btn btn-cancel" %>
+    <div class="LibrosShow-informacion-container">
+      <p class="LibrosShow-info">
+        <strong>Nombre:</strong>
+        <%= @libro.nombre %>
+      </p>
+
+      <p class="LibrosShow-info">
+        <strong>Descripción:</strong>
+        <%= @libro.descripción %>
+      </p>
+
+      <p class="LibrosShow-info">
+        <strong>Editorial:</strong>
+        <%= @libro.editorial %>
+      </p>
+
+      <p class="LibrosShow-info">
+        <strong>Año publicación:</strong>
+        <%= @libro.año_publicación %>
+      </p>
+
+      <%= link_to 'Editar', edit_libro_path(@libro), class:"btn btn-secundario" %> |
+      <%= link_to 'Atrás', libros_path, class:"btn btn-cancel" %>
+    </div>
+    </div>
 
 </div>

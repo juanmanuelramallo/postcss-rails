@@ -1,43 +1,49 @@
+<h1 class="LibrosIndex-title">LibrosYa! 📚</h1>
+
+<p id="notice"><%= notice %></p>
+
 <div class="LibrosIndex">
 
   <div class="LibrosIndex-libros">
 
-    <p id="notice"><%= notice %></p>
+    <div class="LibrosIndex-libros-container">
 
-    <h1>Libros</h1>
-
-    <table class="LibrosIndex-table">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Editorial</th>
-          <th>Portada</th>
-          <th>Año publicación</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @libros.each do |libro| %>
+      <table class="LibrosIndex-table">
+        <thead>
           <tr>
-            <td><%= libro.nombre %></td>
-            <td><%= libro.editorial %></td>
-            <td><%= image_tag libro.portada.url(:thumb), class:"" %></td>
-            <td><%= libro.año_publicación %></td>
-            <td><%= link_to 'Ver', libro, class:"btn btn-principal" %></td>
-            <td><%= link_to 'Editar', edit_libro_path(libro), class:"btn btn-secundario" %></td>
-            <td><%= link_to 'Eliminar', libro, method: :delete, data: { confirm: 'Estás seguro?' }, class:"btn btn-peligro" %></td>
+            <th>Nombre</th>
+            <th>Editorial</th>
+            <th>Portada</th>
+            <th>Año publicación</th>
+            <th colspan="3"></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
 
-    <br>
+        <tbody>
+          <% @libros.each do |libro| %>
+            <tr>
+              <td><%= libro.nombre %></td>
+              <td><%= libro.editorial %></td>
+              <td><%= image_tag libro.portada.url(:thumb), class:"LibrosIndex-table-img" %></td>
+              <td><%= libro.año_publicación %></td>
+              <td><%= link_to 'Ver', libro, class:"btn btn-principal" %></td>
+              <td><%= link_to 'Editar', edit_libro_path(libro), class:"btn btn-secundario" %></td>
+              <td><%= link_to 'Eliminar', libro, method: :delete, data: { confirm: 'Estás seguro?' }, class:"btn btn-peligro" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+    </div>
   </div>
 
   <div class="LibrosIndex-info">
 
-    <%= link_to 'Añadir libro', new_libro_path, class:"btn btn-principal" %>
+    <div class="LibrosIndex-info-container">
+      <%= link_to '+', new_libro_path, class:"LibrosIndex-info-anadir" %>
+    </div>
 
   </div>
 

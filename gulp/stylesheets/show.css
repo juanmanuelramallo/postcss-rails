@@ -1,0 +1,29 @@
+.LibrosShow {
+  lost-center: 80% 30px flex;
+  background-color: white;
+  box-shadow: materialize-shadow-helper(1);
+
+  &-title{
+    text-align: center;
+  }
+
+  &-imgcontainer {
+    /*filter: toaster;*/
+    height: 100%;
+  }
+
+  &-img{
+    height: 100%;
+  }
+
+  &-portada {
+    lost-column: 1/3;
+  }
+
+  &-informacion{
+    lost-column: 2/3;
+    &-container{
+      padding-top: 30px;
+    }
+  }
+}
