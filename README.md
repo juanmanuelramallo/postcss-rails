@@ -8,26 +8,31 @@ _Aplicación de Rails ya creada_
 - Agregar en el .gitignore la carpeta /node_modules
 - Crear archivo **gulpfile.js** en directorio raíz
 - En **config/application.rb** requerir los archivos:
+
       config.assets.paths << Rails.root.join("public", "assets", "stylesheets")
       config.assets.paths << Rails.root.join("public", "assets", "javascripts")
 - En **app/assets/stylesheets/application.css** requerir el archivo de salida que está en public:
 `*= require main`
 - En **config/environments/development.rb** configurar (para aprovechar BroswerSync):
+      
       config.assets.debug = true
       config.assets.digest = false
 - En **package.json** agregar en *scripts* lo siguiente para limpiar y compilar:
+      
       "postinstall": "gulp clean; gulp css;"
 - Para usar un plugin de postcss primero se debe instalar usando `npm install --save-dev [nombre_plugin]`
 
 ## El archivo gulpfile.js
 
 - Se deben requerir los siguiente módulos:
+      
       var gulp = require('gulp')
       var postcss = require('gulp-postcss')
       var browserSync = require('browser-sync').create()
       var del = require('del');
       var rename = require('gulp-rename')
 - Y adicionalmente las partes de postcss que se desean usar (ver http://postcss.parts):
+      
       var rucksack = require('rucksack-css')
       var cssnext = require('postcss-cssnext')
       var autoprefixer = require('autoprefixer')
