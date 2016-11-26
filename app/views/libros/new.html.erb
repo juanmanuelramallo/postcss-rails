@@ -1,8 +1,10 @@
 <div class="LibrosNew">
-<h1>New Libro</h1>
+  <!-- Para obtener lo esperado con lost(grilla) se debe usar un container -->
+  <div class="LibrosNew-container">
+    <h1 class="LibrosNew-title"><%= link_to '⬅️', libros_path, class:"btn btn-cancel no-border" %> Nuevo libro  </h1>
 
-<%= render 'form', libro: @libro %>
+    <%= render 'form', libro: @libro %> </br>
 
-<%= link_to 'Cancelar', libros_path, class:"btn btn-cancel" %>
 
+  </div>
 </div>

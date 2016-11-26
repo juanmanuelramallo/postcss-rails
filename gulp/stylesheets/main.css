@@ -1,9 +1,16 @@
+/*
+  Antes de cada elemento que use algún plugin de postcss es especificado con lo que hace seguido del nombre del plugin.
+  Recordar que todos los plugins están definidos en el gulpfile y listados en el task llamado 'css' dentro de un arreglo 'processors'
+*/
+
+/* Importing files like a pro --> postcss-import https://github.com/postcss/postcss-import */
 @import 'botones.css';
 @import 'variables.css';
 @import 'show.css';
 
 html{
   background-color: #e6e6e6;
+  /* Usar google fonts nunca fue tan fácil --> postcss-font-magician https://github.com/jonathantneal/postcss-font-magician */
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -16,35 +23,38 @@ a {
 }
 
 .LibrosIndex {
+  /* Sistema de grillas --> lost https://github.com/peterramsing/lost */
   lost-center: 80% 30px flex;
 
-  &-title{
+  /* Nesting in the more intuitive way --> postcss-cssnext https://github.com/MoOx/postcss-cssnext */
+  &-title{ /* Es como poner --> .LibrosIndex-title{ */
     text-align: center;
     font-size: 44px;
     font-family: 'Indie Flower';
   }
 
+  /* Nesting again --> postcss-cssnext */
   &-libros{
     lost-column: 2/3;
     background-color: white;
     border-radius: 5px;
     box-shadow: materialize-shadow-helper(1);
 
+    /* Nesting one more level --> postcss-cssnext */
     &-container {
       padding: 20px;
     }
 
-    &-table {
-
-    }
   }
 
+  /* More nesting (and plenty more below) */
   &-info{
+    /* Define una columna para &-info de tres que tendrá en total el ancho máximo --> lost */
     lost-column: 1/3;
     background-color: white;
     border-radius: 5px;
+    /* Sombreado especificado por materialize design guidelines --> postcss-material-shadow-helper https://github.com/harrisrobin/postcss-material-shadow-helper */
     box-shadow: materialize-shadow-helper(1);
-    /*width: 20%;*/
 
     &-container{
       position: relative;
@@ -57,16 +67,40 @@ a {
       text-decoration: none;
       text-align: center;
       padding: 30px 0px 30px 0px;
-      background-color: dim
+      background-color: lightgray;
       /*border: 1px black solid;*/
       font-size: 30px;
     }
-
   }
 }
 
-
-
 td {
   text-align: center;
+}
+
+.LibrosForm{
+  &-field{
+    padding: 10px 0px;
+    & input {
+      height: 25px;
+      width: 100%;
+    }
+  }
+
+}
+
+.LibrosNew{
+  position: relative;
+  top: 30px;
+  lost-center: 60% 30px flex;
+  background-color: white;
+  box-shadow: materilize-shadow-helper(1);
+
+  &-container{
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  &-title{
+    text-align: center;
+  }
 }

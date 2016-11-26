@@ -6,12 +6,11 @@ var rename = require('gulp-rename')
 
 var rucksack = require('rucksack-css')
 var cssnext = require('postcss-cssnext')
-var autoprefixer = require('autoprefixer')
 var cssnested = require('postcss-nested')
 var mixins = require('postcss-mixins')
 var lost = require('lost')
 var atImport = require('postcss-import')
-var csswring = require('csswring')
+var csswring = require('csswring') /* Minimificador */
 var materialShadow = require('postcss-material-shadow-helper')
 var instagram = require('postcss-instagram')
 var fontMagician = require('postcss-font-magician')
