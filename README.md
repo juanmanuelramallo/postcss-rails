@@ -1,5 +1,7 @@
+# ¿Front-end en una aplicación Rails?
+
 Al usar Rails, cualquier desarrollador (full-stack) se habrá encontrado con algunos de los siguientes puntos:
-- el problema de que **las vistas son poco amigables de programar**, Rails no provee de *live reloading* para ver los cambios al instante
+- El problema de que **las vistas son poco amigables de programar**, Rails no provee de *live reloading* para ver los cambios al instante
 - **Mucho javascript** en las vistas puede resultar **no muy atractivo** para un ruby developer
 - **Bootstrap/Foundation** me gustan, son fáciles de usar, pero ponerme a modificarlos **nunca queda como quiero** ni se bien que es lo que está pasando por debajo
 
