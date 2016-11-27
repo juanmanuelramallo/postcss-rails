@@ -24,17 +24,17 @@ _Aplicación de Rails ya creada_
 - Crear archivo **gulpfile.js** en directorio raíz
 - En **config/application.rb** requerir los archivos:
 
-        config.assets.paths << Rails.root.join("public", "assets", "stylesheets")
-        config.assets.paths << Rails.root.join("public", "assets", "javascripts")
+            config.assets.paths << Rails.root.join("public", "assets", "stylesheets")
+            config.assets.paths << Rails.root.join("public", "assets", "javascripts")
 - En **app/assets/stylesheets/application.css** requerir el archivo de salida que está en public:
 `*= require main`
 - En **config/environments/development.rb** configurar (para aprovechar BroswerSync):
 
-        config.assets.debug = true
-        config.assets.digest = false
+            config.assets.debug = true
+            config.assets.digest = false
 - En **package.json** agregar en *scripts* lo siguiente para limpiar y compilar:
 
-        "postinstall": "gulp clean; gulp css;"
+            "postinstall": "gulp clean; gulp css;"
 - Para usar un plugin de postcss primero se debe instalar usando `npm install --save-dev [nombre_plugin]`
 
 ## El archivo gulpfile.js
@@ -109,10 +109,12 @@ _Aplicación de Rails ya creada_
 
         gulp.task('default', ['watch', 'serve'])
 
-##Consideraciones
+
+## Consideraciones
 
 - Las carpetas del código fuente deberán estar en **/gulp/stylesheets** (crear la carpeta)
 - El archivo principal del código CSS será: **/gulp/stylesheets/main.css**
 - Todo lo procesado por Postcss irá directo a **/public/assets**
+- Para correr el servidor local con live-reloading se debe primero poner a correr `rails server` y luego `gulp` en la terminal
 
 Para profundizar un poco más en el manejo de assets usando Gulp (en Rails) observar el siguiente [proyecto en github](https://github.com/vigetlabs/gulp-rails-pipeline).
