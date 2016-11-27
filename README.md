@@ -112,6 +112,11 @@ _Aplicación de Rails ya creada_
         gulp.task('default', ['watch', 'serve'])
 
 
+## Ejemplos
+El siguiente [ejemplo](https://github.com/juanmanuelramallo/postcss-rails-laplatarb) fue desarrollado para una charla en laplata.rb. Ver el código fuente en CSS **/gulp/stylesheets/main.css** que tiene comentarios en cada línea que usa un plugin de Postcss.
+
+En producción, se puede observar la página de un [estudio inmobiliario platense](cabralpropiedades.com.ar) que dispone toda la interfaz de usuario creada con Postcss (sin usar ningún framework de front-end como Bootstrap o Foundation), y que al mismo tiempo usa para la sección de administración el *Rails asset pipeline* sin crear conflictos entre ambos caminos que toman los archivos de estilos.
+
 ## Consideraciones
 
 - Las carpetas del código fuente deberán estar en **/gulp/stylesheets** (crear la carpeta)
